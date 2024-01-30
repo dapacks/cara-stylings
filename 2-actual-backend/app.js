@@ -1,14 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
-app.use(cors({
-  origin: ["https://deploy-mern-lwhq.vercel.app"],
-  methods: ["POST", "GET"],
-  credentials: true
-}));
+app.use(cors());
 
 app.get("/",(req,res)=>
   {
