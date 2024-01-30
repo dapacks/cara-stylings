@@ -20,6 +20,8 @@ app.use((req, res, next) => {
   next();
 });
 
+// ... (other imports and code)
+
 app.get('/items', async (req, res) => {
   try {
     const storedItems = await getStoredItems();
@@ -35,7 +37,12 @@ app.get('/items/:id', async (req, res) => {
   try {
     const storedItems = await getStoredItems();
     const item = storedItems.find((item) => item.id === req.params.id);
-    res.json({ item });
+    if (!item) {
+      console.error('Item not found:', req.params.id);
+      res.status(404).json({ error: 'Item not found' });
+    } else {
+      res.json({ item });
+    }
   } catch (error) {
     console.error('Error fetching item by ID:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -58,6 +65,9 @@ app.post('/items', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+// ... (rest of the code)
+
 
 // Listen on the specified port
 app.listen(PORT, () => {
