@@ -1,17 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+
 const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
-app.use(cors());
-
-app.get("/",(req,res)=>
-  {
-    res,json("Hello");
-  })
 
 app.use(bodyParser.json());
+app.get("/start", (req, res) => {
+  res.send("Hello"); // Corrected 'res.get' to 'res.send'
+});
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,7 +19,7 @@ app.use((req, res, next) => {
 
 app.get('/items', async (req, res) => {
   const storedItems = await getStoredItems();
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 4000));
+  await new Promise((resolve) => setTimeout(resolve, 4000));
   res.json({ items: storedItems });
 });
 
@@ -43,5 +40,8 @@ app.post('/items', async (req, res) => {
   await storeItems(updatedItems);
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
+
+// Export the Express app as a handler function
+module.exports = app;
 
 
