@@ -29,21 +29,23 @@ app.get('/items', async (req, res) => {
   }
 });
 
-app.get('/items/:id', async (req, res) => {
+app.get('/items', async (req, res) => {
   try {
+    console.log('Fetching items...');
     const storedItems = await getStoredItems();
-    const item = storedItems.find((item) => item.id === req.params.id);
-    if (!item) {
-      console.error('Item not found:', req.params.id);
-      res.status(404).json({ error: 'Item not found' });
-    } else {
-      res.json({ item });
-    }
+    console.log('Items fetched successfully.');
+    
+    console.log('Simulating delay...');
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+    
+    console.log('Sending response.');
+    res.json({ items: storedItems });
   } catch (error) {
-    console.error('Error fetching item by ID:', error);
+    console.error('Error fetching items:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 app.post('/items', async (req, res) => {
   try {
