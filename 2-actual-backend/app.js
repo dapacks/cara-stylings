@@ -1,11 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-// Assuming getStoredItems and storeItems functions are in a separate file (./data/items)
 const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
-const PORT = process.env.PORT || 8081; // Use process.env.PORT for Vercel compatibility
+const PORT = process.env.PORT || 8081;
 
 app.use(bodyParser.json());
 
@@ -19,8 +17,6 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
-
-// ... (other imports and code)
 
 app.get('/items', async (req, res) => {
   try {
@@ -66,14 +62,10 @@ app.post('/items', async (req, res) => {
   }
 });
 
-// ... (rest of the code)
-
-
-// Listen on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app; // Export the app for use in serverless deployments
+module.exports = app;
 
 
