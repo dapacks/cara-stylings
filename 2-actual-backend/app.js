@@ -10,6 +10,10 @@ app.use(cors({
   credentials: true
 }));
 
+app.get("/",(req,res)=>
+  {
+    res,json("Hello");
+  })
 
 app.use(bodyParser.json());
 
