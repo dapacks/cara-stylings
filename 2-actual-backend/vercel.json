@@ -1,12 +1,12 @@
 {
-   "version": 2,
-   "name": "cara-app",
-   "builds": [
-      { "src": "app.js", "use": "@vercel/node" }
-   ],
-   "routes": [
-      { "src": "/(.*)", "dest": "/app.js" }
-   ]
+  "version": 2,
+  "builds": [
+    { "src": "app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/items", "dest": "app.js" },
+    { "src": "/items/:id", "dest": "app.js" },
+    { "src": "/items", "dest": "app.js" },
+    { "src": "/api/*", "dest": "app.js" }
+  ]
 }
-
-
