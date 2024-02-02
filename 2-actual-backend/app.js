@@ -29,22 +29,7 @@ app.get('/items', async (req, res) => {
   }
 });
 
-app.get('/items', async (req, res) => {
-  try {
-    console.log('Fetching items...');
-    const storedItems = await getStoredItems();
-    console.log('Items fetched successfully.');
-    
-    console.log('Simulating delay...');
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-    
-    console.log('Sending response.');
-    res.json({ items: storedItems });
-  } catch (error) {
-    console.error('Error fetching items:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
+
 
 
 app.post('/items', async (req, res) => {
