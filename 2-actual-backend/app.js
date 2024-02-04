@@ -2,10 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
+import { getStoredItems, storeItems } from './data/items';
 
 const app = express();
 const PORT = process.env.PORT || 8081;
 const itemsFilePath = path.join(process.cwd(), 'data', 'items.json');
+
+// Additional logging for file path
+console.log('Items file path in app.js:', itemsFilePath);
 
 app.use(bodyParser.json());
 
