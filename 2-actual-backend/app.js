@@ -1,14 +1,16 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { getStoredItems, storeItems } = require('./data/items');
+import fs from 'fs';
+import path from 'path';
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = process.env.PORT || 8081;
+const itemsFilePath = path.join(process.cwd(), 'data', 'items.json');
 
 app.use(bodyParser.json());
 
 app.get('/start', (req, res) => {
-  res.send('Hello my  name is deepak');
+  res.send('Hello my name is deepak');
 });
 
 app.use((req, res, next) => {
@@ -17,6 +19,26 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
+
+const getStoredItems = async () => {
+  try {
+    const fileContent = fs.readFileSync(itemsFilePath, 'utf8');
+    return JSON.parse(fileContent);
+  } catch (error) {
+    console.error('Error reading items file:', error);
+    throw error;
+  }
+};
+
+const storeItems = async (items) => {
+  try {
+    const data = JSON.stringify(items, null, 2);
+    fs.writeFileSync(itemsFilePath, data, 'utf8');
+  } catch (error) {
+    console.error('Error writing items file:', error);
+    throw error;
+  }
+};
 
 app.get('/items', async (req, res) => {
   try {
@@ -28,9 +50,6 @@ app.get('/items', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-
-
 
 app.post('/items', async (req, res) => {
   try {
@@ -53,6 +72,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app;
-
-
+export default app;
