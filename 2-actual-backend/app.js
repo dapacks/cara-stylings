@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import express from 'express';
-import bodyParser from 'body-parser';
-import { getStoredItems, storeItems } from './data/items';
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
