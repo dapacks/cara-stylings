@@ -5,71 +5,71 @@
         "id": "001",
         "img": "./product-img/f1.jpg",
         "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "des": "Mixed design T-shirts",
+        "price": "175"
       },
       {
         "id": "002",
         "img": "./product-img/f2.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "Zara",
+        "des": "floral design T-shirts",
+        "price": "125"
       },
       {
         "id": "003",
         "img": "./product-img/f3.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "gucci",
+        "des": "floral colorfull T-shirts",
+        "price": "183"
       },
       {
         "id": "004",
         "img": "./product-img/f4.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "Tommy",
+        "des": "sleek flowers T-shirts",
+        "price": "125"
       },
       {
         "id": "005",
         "img": "./product-img/f5.jpg",
         "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "des": "blue flowers T-shirtss",
+        "price": "145"
       },
       {
         "id": "006",
         "img": "./product-img/f6.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "gucci",
+        "des": "half mix design T-shirts",
+        "price": "165"
       },
       {
         "id": "007",
         "img": "./product-img/f7.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "puma",
+        "des": "girsl floral cream finish",
+        "price": "163"
       },
       {
         "id": "008",
         "img": "./product-img/f8.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "zara",
+        "des": "light voilet top finish",
+        "price": "178"
       },
       {
         "id": "009",
         "img": "./product-img/n1.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "highlander",
+        "des": "plain skyblue shirt",
+        "price": "115"
       },
       {
         "id": "010",
         "img": "./product-img/n2.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "harward",
+        "des": "grey sleek finish",
+        "price": "125"
       },
       {
         "id": "011",
@@ -81,37 +81,37 @@
       {
         "id": "012",
         "img": "./product-img/n4.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "tommy",
+        "des": "plain white finish",
+        "price": "185"
       },
       {
         "id": "013",
         "img": "./product-img/n5.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "puma",
+        "des": "mixed half shirt",
+        "price": "195"
       },
       {
         "id": "014",
         "img": "./product-img/n6.jpg",
         "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "des": "navy blue finish",
+        "price": "125"
       },
       {
         "id": "015",
         "img": "./product-img/n7.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "Reebok",
+        "des": "boys outdoor pants",
+        "price": "185"
       },
       {
         "id": "016",
         "img": "./product-img/n8.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
+        "brand": "jungle beans",
+        "des": "full cargo tshirt",
+        "price": "185"
       }
     ]
   ]
