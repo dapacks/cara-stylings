@@ -74,44 +74,44 @@
       {
         "id": "011",
         "img": "./product-img/n3.jpg",
-        "brand": "Adidas",
-        "des": "Cartoon Astronaut T-shirts",
-        "price": "75"
-      },
-      {
-        "id": "012",
-        "img": "./product-img/n4.jpg",
         "brand": "tommy",
         "des": "plain white finish",
         "price": "185"
       },
       {
-        "id": "013",
+        "id": "012",
         "img": "./product-img/n5.jpg",
         "brand": "puma",
         "des": "mixed half shirt",
         "price": "195"
       },
       {
-        "id": "014",
+        "id": "013",
         "img": "./product-img/n6.jpg",
         "brand": "Adidas",
         "des": "navy blue finish",
         "price": "125"
       },
       {
-        "id": "015",
+        "id": "014",
         "img": "./product-img/n7.jpg",
         "brand": "Reebok",
         "des": "boys outdoor pants",
         "price": "185"
       },
       {
-        "id": "016",
+        "id": "015",
         "img": "./product-img/n8.jpg",
         "brand": "jungle beans",
         "des": "full cargo tshirt",
         "price": "185"
+      },
+        {
+        "id": "016",
+        "img": "./product-img/n4.jpg",
+        "brand": "Signature",
+        "des": "dull black full shirt",
+        "price": "100"
       }
     ]
   ]
